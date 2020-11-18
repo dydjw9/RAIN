@@ -78,5 +78,7 @@ The default setting is to test all white-box attacks.
 
 For the EAD attack in ImageNet dataset, it may consumes enourmous GPU memroy, you may change the batch size in line 221 of the file "main_cnn.py" to save memory. The default number is 32. 
 
+For the EOT attack, use the EOT model for testing. The num_samples determines the number of samples in EOT attack. Therefore, comparing to the standard adversarail attack, EOT attack evaluation will require much longer time. 
+
   
 
