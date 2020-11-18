@@ -23,6 +23,7 @@ parser.add_argument('--isODE', type=str, default='False')
 parser.add_argument('--isSS', type=str, default='False')
 parser.add_argument('--isRandom', type=str, default='True')
 parser.add_argument('--device_ids', type=str, default='0_1')
+parser.add_argument('--shift_p', default=0.05, type=float)
 
 parser.add_argument('--robustness_evaluation_number', type=int, default=5000,help = 'number of samples to be testes in rosbustness evaluation')
 args, _ = parser.parse_known_args()

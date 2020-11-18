@@ -3,4 +3,6 @@
 
 #test
 python main_cnn.py --isTrain False --device_ids 0_1_2 --dir_model ../../checkpoints/fullimgnet/model/model.pth   --logging_file ImgNet.txt --robustness_evaluation_number 5000
+# EOT Model
+python main_cnn.py --isTrain False --device_ids 0_1_2 --dir_model ../../checkpoints/fullimgnet/model/EOT_model.pth   --logging_file ImgNet.txt --robustness_evaluation_number 5000
 

@@ -231,6 +231,17 @@ if __name__ == '__main__':
         acc8 =  0 if False else deepfool(NUM,model,val_loader_128,8,40)
         #ead attack
         acc9 = 0 if False else ead_attack(NUM,model,val_loader_128,1,iters = 40,isnorm=False)
+        #EOT FGSM
+        acc10 =  0 if False else EOT_attack(NUM,model,val_loader_128,8,8,iters = 1,isnorm=False,num_samples=40)
+        #EOT PGD
+        acc11 =  0 if False else EOT_attack(NUM,model,val_loader_128,8,2,iters = 40,isnorm=False,num_samples=40)
+        #rays 
+        acc12 =  0 if False else rays_attack(NUM,model,val_loader_128,16,8,iters =1000,isnorm=False)
+        #EOT CW
+        acc13 =  0 if False else EOT_CW_attack(NUM,model,val_loader,1,iters=40,isnorm=False,num_samples=40)
+
+
         logger.info(
-                "=== >> Test Acc: {:.5f}, FGSM Acc: {:.5f}, pgd: {:.5f} zoo {:.5f},nes {:.5f},cw {:.5f},deepfool {:.5f} ead {:.5f}".format(acc,acc2,acc3,acc4,acc5,acc6,acc8,acc9)
+                "=== >> Test Acc: {:.5f}, FGSM Acc: {:.5f}, pgd: {:.5f} zoo {:.5f},nes {:.5f},cw {:.5f},deepfool {:.5f} ead {:.5f} EOT FGSM {:.5f} EOT PGD {:.5f} rays {:.5f} EOT CW {:.5f}".format(acc,acc2,acc3,acc4,acc5,acc6,acc8,acc9,acc10,acc11,acc12,acc13)
             )
+

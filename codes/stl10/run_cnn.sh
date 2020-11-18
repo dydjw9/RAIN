@@ -4,3 +4,7 @@
 #test
 python main_cnn.py --isTrain False --device_ids 0_1 --dir_model ../../checkpoints/stl10/model/model.pth  --logging_file STL10.txt --robustness_evaluation_number 5000
 
+#EOT model 
+python main_cnn.py --isTrain False --device_ids 0_1 --dir_model ../../checkpoints/stl10/model/EOT_model.pth  --logging_file STL10.txt --robustness_evaluation_number 5000
+
+
